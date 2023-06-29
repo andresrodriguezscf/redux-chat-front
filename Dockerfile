@@ -4,5 +4,5 @@ COPY . .
 RUN npm install
 FROM nginx
 WORKDIR /var/www/front
-COPY --from=builder /opt/front/dist/ .
+COPY --from=build /opt/front/dist/ .
 COPY nginx.conf /etc/nginx/
